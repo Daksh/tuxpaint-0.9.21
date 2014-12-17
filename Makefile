@@ -370,7 +370,7 @@ endif
 
 # Build the translation files for gettext
 
-$(MOFILES): trans/%.mo: src/po/%.po  
+$(MOFILES): trans/%.mo: src/po/%.po trans
 	msgfmt -o $@ $<
 
 .PHONY: translations
